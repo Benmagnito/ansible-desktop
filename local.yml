@@ -15,7 +15,7 @@
 
   - name: copy .bshrc file
     copy:
-      src: files/config/bashrc
+      src: files/bashrc
       dest: /home/mbhekeni/.bashrc
       owner: mbhekeni
       group: mbhekeni
