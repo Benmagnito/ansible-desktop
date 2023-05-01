@@ -3,14 +3,13 @@
   become: true
   
   pre_tasks:
-  - name: update repositories
-    apt:
-      update_cache: yes
-    changed_when: False
+    - name: update repositories
+      apt:
+        update_cache: yes
+      changed_when: False
  
   tasks:
-  - unclude: tasks/users.yml
-  - unclude: tasks/cron.yml
-  - unclude: tasks/packages.yml
-  - unclude: tasks/dot-files.yml
-
+    - unclude: tasks/users.yml
+    - unclude: tasks/cron.yml
+    - unclude: tasks/packages.yml
+    - unclude: tasks/dot-files.yml
