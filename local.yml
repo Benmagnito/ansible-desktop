@@ -10,3 +10,23 @@
         - htop
         - tmux
         - vim-nox
+
+  - name: copy wallpaper file
+    copy:
+      src: files/sidu-tech-wallpaper.png
+      dest: /usr/share/backgrounds/sidu-tech-wallpaper.png
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    become_user: mbhekeni
+    dconf:
+      key: "/org/gnome/desktop/backgroung/picture-uri"
+      value: "'file:///usr/share/backgrounds/sidu-tech-wallpaper.png'"
+
+  - name: set wallpapera position
+    become_user: mbhekeni
+    dconf:
+      key: "/org/gnome/desktop/backgroung/picture-options"
+      value: "'zoom'"
+
