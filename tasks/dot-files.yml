@@ -1,0 +1,6 @@
+- name: copy .bshrc file
+  copy:
+    src: files/bashrc
+    dest: /home/mbhekeni/.bashrc
+    owner: mbhekeni
+    group: mbhekeni
