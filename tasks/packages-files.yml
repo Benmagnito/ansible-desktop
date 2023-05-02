@@ -17,6 +17,6 @@
 - name: execute gcloud deoply bash script
   script: /usr/local/bin/google-cloud-sdk/install.sh
   arg:
-    executable: bash
+    executable: /usr/local/bin/google-cloud-sdk/install.sh
 
 
