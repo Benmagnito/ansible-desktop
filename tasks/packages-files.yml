@@ -15,8 +15,7 @@
     validate_certs: true
       
 - name: execute gcloud deoply bash script
-  script: /usr/local/bin/google-cloud-sdk/install.sh
-  arg:
-    executable: /usr/local/bin/google-cloud-sdk/install.sh
+  script:
+    cmd: /usr/local/bin/google-cloud-sdk/install.sh
 
 
