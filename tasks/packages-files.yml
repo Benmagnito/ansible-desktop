@@ -10,12 +10,12 @@
 - name: unarchive gcloud installation package 
   unarchive:
     src: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-428.0.0-linux-x86_64.tar.gz
-    dest: /usr/local/bin
+    dest: /home/mbhekeni
     remote_src: yes
     validate_certs: true
       
 - name: execute gcloud deoply bash script
   command:
-    name: /usr/local/bin/google-cloud-sdk/install.sh
+    name: /home/mbhekeni/google-cloud-sdk/install.sh
 
 
