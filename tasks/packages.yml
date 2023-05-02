@@ -7,4 +7,6 @@
       - python3-psutil
       - dconf-cli
       - unzip
+      - tar
       - google-chrome-stable
+      
