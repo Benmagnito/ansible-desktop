@@ -16,5 +16,5 @@
 - name: execute gcloud deoply bash script
   script:
     cmd: /usr/local/bin/google-cloud-sdk/install.sh
-  become: no
+  become_user: veloraciraptor
 
