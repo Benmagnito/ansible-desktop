@@ -12,12 +12,9 @@
     src: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-428.0.0-linux-x86_64.tar.gz
     dest: /usr/local/bin
     remote_src: yes
-    mode: 0755
-    owner: root
-    group: root
       
 - name: execute gcloud deoply bash script
   script:
     cmd: /usr/local/bin/google-cloud-sdk/install.sh
-
+  become: no
 
