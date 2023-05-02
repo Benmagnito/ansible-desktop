@@ -6,4 +6,6 @@
       - vim-nox
       - python3-psutil
       - dconf-cli
-
+      - unzip
+      - terraform
+      - google-chrome-stable
