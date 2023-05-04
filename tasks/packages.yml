@@ -8,5 +8,9 @@
       - dconf-cli
       - unzip
       - tar
-      - google-chrome-stable
-      
+      - google-chrome-stable 
+      - git
+      - curl
+      - kodi
+      - tree
+      - deluge
