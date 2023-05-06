@@ -10,7 +10,6 @@
       - tar
       - google-chrome-stable 
       - git
-      - curl
       - kodi
       - tree
       - deluge
