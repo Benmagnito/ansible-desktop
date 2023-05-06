@@ -11,8 +11,8 @@
           - apt-transport-https
           - ca-certificates
           - curl
+          - lsb-release
           - gnupg-agent
-          - software-properies-common
       changed_when: False
  
   tasks:
