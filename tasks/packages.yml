@@ -9,7 +9,6 @@
       - dconf-cli
       - unzip
       - tar
-      - google-chrome-stable 
       - git
       - kodi
       - tree
