@@ -2,17 +2,6 @@
   connection: local
   become: true
   pre_tasks:
-    - name: update repositories
-      apt:
-        update_cache: yes
-        state: latest
-        name:
-          - apt-transport-https
-          - ca-certificates
-          - curl
-          - lsb-release
-          - gnupg-agent
-      changed_when: False
 
     - name: Add Docker GPG key
       become: true
@@ -35,6 +24,29 @@
       apt_repository:
         repo: deb https://packages.cloud.google.com/apt cloud-sdk main
         state: present
+
+    - name: Add Google Chrome SDK GPG Key
+      become: true
+      apt_key:
+        url: https://dl.google.com/linux/linux_signing_key.pub
+        state: present
+
+    - name: Add Google Chrome repository 
+      apt_repository:
+        repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+        state: present
+
+    - name: update repositories
+      apt:
+        update_cache: yes
+        state: latest
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - lsb-release
+          - gnupg-agent
+      changed_when: False
 
   tasks:
     - include: tasks/users.yml
