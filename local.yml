@@ -1,7 +1,8 @@
 - hosts: localhost
   connection: local
   become: true
-  
+  vars:
+    user: mbhekeni
   pre_tasks:
     - name: update repositories
       apt:
@@ -15,16 +16,24 @@
           - gnupg-agent
       changed_when: False
 
-    - name: Add Docker GPG key
+    - name: Add Docker GPG key & APT repository package sources
+      become: true
       apt_key:
         url: https://download.docker.com/linux/ubuntu/gpg
         state: present
-
-    - name: Add Docker APT repository
       apt_repository:
         repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
         state: present
  
+    - name: Add Google Cloud SDK package sources
+      become: true
+      apt_key:
+        url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+        state: present
+      apt_repository:
+        repo: deb https://packages.cloud.google.com/apt cloud-sdk main
+        state: present
+
   tasks:
     - include: tasks/users.yml
     - include: tasks/cron.yml
