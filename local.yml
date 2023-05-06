@@ -36,6 +36,18 @@
         repo: deb https://packages.cloud.google.com/apt cloud-sdk main
         state: present
 
+
+    - name: Add Google Chrome repository Key
+      become: true
+      apt_key:
+        url: https://dl.google.com/linux/linux_signing_key.pub
+        state: present
+
+    - name: Add Google Chrome repository 
+      apt_repository:
+        repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+        state: present
+
   tasks:
     - include: tasks/users.yml
     - include: tasks/cron.yml
