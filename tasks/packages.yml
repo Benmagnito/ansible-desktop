@@ -13,3 +13,8 @@
       - kodi
       - tree
       - deluge
+      - docker
+      - docker.io
+      - docker-compose
+      - docker-registry
+    state: latest
