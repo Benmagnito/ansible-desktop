@@ -12,13 +12,6 @@
     owner: mbhekeni
     group: mbhekeni
 
-- name: copy .tmux.conf file
-  copy:
-    src: files/dot-files/tmux.conf
-    dest: /home/mbhekeni/.tmux.conf
-    owner: mbhekeni
-    group: mbhekeni
-
 - name: copy .muttrc file
   copy:
     src: files/dot-files/muttrc
