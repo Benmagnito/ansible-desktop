@@ -18,3 +18,10 @@
     dest: /home/mbhekeni/.tmux.conf
     owner: mbhekeni
     group: mbhekeni
+    
+- name: copy .muttrc file
+  copy:
+    src: files/dot-files/muttrc
+    dest: /home/mbhekeni/.muttrc
+    owner: mbhekeni
+    group: mbhekeni

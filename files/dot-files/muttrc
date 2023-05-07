@@ -1,0 +1,14 @@
+
+set folder = "imaps://mbhekeni@sidu-technologies.cloud@imap.gmail.com:993"
+
+set smtp_url = "smtp://mbhekeni@sidu-technologies.cloud@smtp.gmail.com:587"
+
+set spoolfile = "+INBOX"
+
+set record = "+Sent"
+set trash = "+Trash"
+set postponed - "+Draft"
+
+
+mailboxes =  INBOX =Sent =Trash =Draft =Junk =Other
+
