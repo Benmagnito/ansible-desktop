@@ -3,6 +3,8 @@
   become: true
   pre_tasks:
 
+  # This is a test
+
     - name: Add Docker GPG key
       become: true
       apt_key:
