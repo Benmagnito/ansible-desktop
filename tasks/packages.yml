@@ -20,4 +20,5 @@
       - google-cloud-sdk
       - google-chrome-stable
       - neomutt
+      - golang-go
     state: present
