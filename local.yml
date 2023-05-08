@@ -61,4 +61,4 @@
     - include: tasks/packages.yml
     - include: tasks/dot-files.yml
     - include: tasks/packages-files.yml
-
+    - include: tasks/dirs.yml

@@ -1,0 +1,7 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+Plug 'davidhalter/jedi-vim'
+Plug 'preservim/nerdtree'
+call plug#end()

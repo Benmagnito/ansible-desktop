@@ -1,0 +1,13 @@
+- name: Create .vim parent directory and plug directory
+  file:
+    path: /home/mbhekeni/.vim/plug
+    state: directory
+    recursive: yes
+  when: not ansible_check_mode and not (item.stat.exists | default(false))
+  register: item
+
+- name: Test directory
+  become: yes
+  file:
+    path: /home/mbhekeni/test
+    state: directory
