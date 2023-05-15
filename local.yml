@@ -3,17 +3,15 @@
   become: true
   pre_tasks:
 
-  # This is a test
-
     - name: Add Docker GPG key
       become: true
       apt_key:
-        url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+        url: "https://download.docker.com/linux/ubuntu/gpg"
         state: present
 
     - name: Add Docker repository
       apt_repository:
-        repo: "deb [arch={{ ansible_architecture }}] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable"
+        repo: "deb [arch={{ ansible_architecture }} https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable"
         state: present
  
     - name: Add Google Cloud SDK GPG Key
