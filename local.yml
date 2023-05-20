@@ -31,10 +31,10 @@
         url: https://dl.google.com/linux/linux_signing_key.pub
         state: present
 
-    - name: Add Google Chrome repository 
-      apt_repository:
-        repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-        state: present
+#    - name: Add Google Chrome repository 
+#      apt_repository:
+#        repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+#        state: present
 
     - name: Add Golang PPA 
       apt_repository:
