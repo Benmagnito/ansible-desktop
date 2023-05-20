@@ -21,4 +21,5 @@
       - google-chrome-stable
       - neomutt
       - golang-go
+      - minikube-linux-amd64
     state: present

@@ -13,7 +13,13 @@
       apt_repository:
         repo: "deb [arch={{ ansible_architecture }} https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable"
         state: present
- 
+
+    - name: Add Minikube Binaries
+      become: true
+      apt_key:
+        url: "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64" 
+        state: present
+
     - name: Add Google Cloud SDK GPG Key
       become: true
       apt_key:
@@ -22,7 +28,7 @@
 
     - name: Add Google Cloud repository 
       apt_repository:
-        repo: deb https://packages.cloud.google.com/apt cloud-sdk main
+        repo: deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main
         state: present
 
     - name: Add Google Chrome SDK GPG Key
