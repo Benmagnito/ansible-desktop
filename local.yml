@@ -42,7 +42,7 @@
 #        state: present
 
     - name: update repositories
-      apt:
+      package:
         update_cache: yes
         state: latest
         name:
