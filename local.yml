@@ -41,17 +41,17 @@
 #        repo: ppa:longsleep/golang-backports
 #        state: present
 
-    - name: update repositories
-      package:
-        update_cache: yes
-        state: latest
-        name:
-          - apt-transport-https
-          - ca-certificates
-          - curl
-          - lsb-release
-          - gnupg-agent
-      changed_when: False
+#    - name: update repositories
+#      package:
+#        update_cache: yes
+#        state: latest
+#        name:
+#          - apt-transport-https
+#          - ca-certificates
+#          - curl
+#          - lsb-release
+#          - gnupg-agent
+#      changed_when: False
 
   tasks:
     - include: tasks/users.yml
