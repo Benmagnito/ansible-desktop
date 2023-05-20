@@ -20,38 +20,38 @@
         url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
         state: present
 
-#    - name: Add Google Cloud repository 
-#      apt_repository:
-#        repo: dep https://packages.cloud.google.com/apt cloud-sdk main 
-#        state: present
+    - name: Add Google Cloud repository 
+      apt_repository:
+        repo: dep https://packages.cloud.google.com/apt cloud-sdk main 
+        state: present
 
-#    - name: Add Google Chrome SDK GPG Key
-#      become: true
-#      apt_key:
-#        url: https://dl.google.com/linux/linux_signing_key.pub
-#        state: present
+    - name: Add Google Chrome SDK GPG Key
+      become: true
+      apt_key:
+        url: https://dl.google.com/linux/linux_signing_key.pub
+        state: present
 
-#    - name: Add Google Chrome repository 
-#      apt_repository:
-#        repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-#        state: present
+    - name: Add Google Chrome repository 
+      apt_repository:
+        repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+        state: present
 
-#    - name: Add Golang PPA 
-#      apt_repository:
-#        repo: ppa:longsleep/golang-backports
-#        state: present
+    - name: Add Golang PPA 
+      apt_repository:
+        repo: ppa:longsleep/golang-backports
+        state: present
 
-#    - name: update repositories
-#      package:
-#        update_cache: yes
-#        state: latest
-#        name:
-#          - apt-transport-https
-#          - ca-certificates
-#          - curl
-#          - lsb-release
-#          - gnupg-agent
-#      changed_when: False
+    - name: update repositories
+      apt:
+        update_cache: yes
+        state: latest
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - lsb-release
+          - gnupg-agent
+      changed_when: False
 
   tasks:
     - include: tasks/users.yml
