@@ -36,10 +36,10 @@
 #        repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 #        state: present
 
-    - name: Add Golang PPA 
-      apt_repository:
-        repo: ppa:longsleep/golang-backports
-        state: present
+#    - name: Add Golang PPA 
+#      apt_repository:
+#        repo: ppa:longsleep/golang-backports
+#        state: present
 
     - name: update repositories
       apt:
