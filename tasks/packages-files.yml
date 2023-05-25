@@ -7,15 +7,6 @@
     owner: root
     group: root
 
-- name: install balena-etcher
-  unarchive:
-    src: https://github.com/balena-io/etcher/releases/download/v1.18.4/balenaEtcher-1.18.4-x64.AppImage
-    dest: /usr/local/bin
-    remote_src: yes
-    mode: 0755
-    owner: root
-    group: root
-
 - name: unarchive gcloud installation package 
   unarchive:
     src: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-428.0.0-linux-x86_64.tar.gz
