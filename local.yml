@@ -27,17 +27,6 @@
         state: present
         filename: docker
 
-    - name: Add Google Cloud SDK GPG Key
-      become: true
-      apt_key:
-        url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
-        state: present
-
-    - name: Add Google Cloud repository 
-      apt_repository:
-        repo: "dep https://packages.cloud.google.com/apt cloud-sdk main" 
-        state: present
-
     - name: Add Google Chrome SDK GPG Key
       become: true
       apt_key:
