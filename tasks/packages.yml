@@ -22,4 +22,5 @@
       - neomutt
       - golang-go
       - minikube-linux-amd64
-    state: present
+    state: latest
+    update_cache: true
