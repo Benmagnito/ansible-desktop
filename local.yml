@@ -10,8 +10,8 @@
         state: present
 
     - name: Add Docker repository
-      ansible.builtin.apt_repository:
-        repo: deb https://download.docker.com/linux/ubuntu jammy stable
+      apt_repository:
+        repo: deb "https://download.docker.com/linux/ubuntu jammy stable"
         state: present
         filenme: docker
 
