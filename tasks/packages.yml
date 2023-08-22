@@ -17,7 +17,6 @@
       - docker.io
       - docker-compose
       - docker-registry
-      - google-chrome-stable
       - neomutt
       - golang-go
     state: latest
