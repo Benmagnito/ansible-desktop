@@ -26,19 +26,7 @@
         repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable"
         state: present
         filename: docker
-
-    - name: Add Google Chrome SDK GPG Key
-      become: true
-      apt_key:
-        url: "https://dl.google.com/linux/linux_signing_key.pub"
-        state: present
-
-    - name: Add Google Chrome repository
-      apt_repository:
-        repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
-        state: present
-        filename: google-chrome
-
+        
     - name: Add Golang PPA 
       apt_repository:
         repo: ppa:longsleep/golang-backports
